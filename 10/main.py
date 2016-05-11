@@ -14,8 +14,7 @@ def is_prime(num):
 with tqdm(total = 2000000) as bar:
     for a in range(2000000):
         if is_prime(a):
-            # print "%s is prime" % a
             sum += a
         bar.update(1)
 
-print sum - 1
+print sum
