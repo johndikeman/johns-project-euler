@@ -17,19 +17,17 @@ def get_number_of_factors(num):
 progress = 0
 ind = 1
 largest = 0
-
-print get_number_of_factors(28)
-print find_nth_triangle_number(4)
-
+num = 0
 
 with tqdm(total = 500) as bar:
     while 1:
-        num = get_number_of_factors(find_nth_triangle_number(ind))
+        progress += ind
+        num = get_number_of_factors(progress)
         if num > largest:
             diff = num - largest
             largest = num
             bar.update(diff)
         if num > 500:
-            print(find_nth_triangle_number(ind))
+            print progress
             break
         ind += 1
